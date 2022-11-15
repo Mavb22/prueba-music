@@ -26,6 +26,30 @@ class _ButtonsState extends State<Buttons> with SingleTickerProviderStateMixin{
     playAnimation.dispose();
     super.dispose();
   }
+  // void open () async{
+  //   final audioPlayerModel = Provider.of<AudioPlayerModel>(context, listen:false);
+  //   // assetAudioplayer.open(
+  //   //   Audio('assets/Ojitos Lindos.mp3'),
+  //   //   autoStart: true,
+  //   //   showNotification: true
+  //   // );
+    
+  //   await assetAudioplayer.open(
+  //       Audio.network("https://storage.googleapis.com/mavb-3d25f.appspot.com/1668364286834.mp3"),
+  //   );
+  //   // assetAudioplayer.open(
+  //   //   Audio.network('https://storage.googleapis.com/mavb-3d25f.appspot.com/1668364286834.mp3'),
+  //   //   autoStart: true,
+  //   //   showNotification: true
+  //   // );
+  //   assetAudioplayer.currentPosition.listen((duration) { 
+  //     audioPlayerModel.current = duration;
+  //   });
+  //   assetAudioplayer.current.listen((playingAudio) {
+  //     audioPlayerModel.songDuration = playingAudio?.audio.duration ?? Duration(seconds: 0);
+  //   });
+
+  // }
   @override
   Widget build(BuildContext context) {
      return Container(
