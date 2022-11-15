@@ -6,7 +6,7 @@ class ImagenDisco extends StatelessWidget {
   const ImagenDisco({super.key});
   @override
   Widget build(BuildContext context) {
-    // final audioPlayerModel = Provider.of<AudioPlayerModel>(context);
+    final audioPlayerModel = Provider.of<AudioPlayerModel>(context);
     return Container(
       padding: const EdgeInsets.all(20),
       width: 245,
@@ -29,10 +29,10 @@ class ImagenDisco extends StatelessWidget {
           children: [
             SpinPerfect(
               duration: const Duration(seconds: 10),
-              // infinite: true,
-              // manualTrigger: true,
-              // animate: false,
-              // controller: (animationController)=> audioPlayerModel.controller = animationController,
+              infinite: true,
+              manualTrigger: true,
+              animate: false,
+              controller: (animationController)=> audioPlayerModel.controller = animationController,
               child: Image.network('https://i.scdn.co/image/ab67616d0000b27349d694203245f241a1bcaa72'),
             ),
             Container(

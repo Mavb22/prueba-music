@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../models/audioplayer_model.dart';
 
 class Buttons extends StatefulWidget {
 
@@ -66,18 +69,18 @@ class _ButtonsState extends State<Buttons> with SingleTickerProviderStateMixin{
             //   ),
             
             onPressed: (){
-              // final audioPlayerModel = Provider.of<AudioPlayerModel>(context,listen: false);
+              final audioPlayerModel = Provider.of<AudioPlayerModel>(context,listen: false);
               // setState(() {
               //   _play = !_play;
               // });
               if(isPlaying){
                 playAnimation.reverse();
                 isPlaying = false;
-                // audioPlayerModel.controller.stop();
+                audioPlayerModel.controller.stop();
               }else{
                 playAnimation.forward();
                 isPlaying = true;
-                // audioPlayerModel.controller.repeat();
+                audioPlayerModel.controller.repeat();
               }
 
               // if(firstTime){
